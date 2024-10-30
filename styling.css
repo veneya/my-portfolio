@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh; 
+}
+
+.left-half {
+    flex:75%; 
+    height:75%;
+    background-color: black;
+}
+.heading{
+    font-weight:bold;
+    padding:10px;
+    color:white;
+    width:21%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.right-half {
+    flex: 1; 
+    background-color: white; /* Change to your desired color */
+}
+
+.overlay {
+    position: absolute;
+    top: 90px; 
+    left: 60px; 
+    right: 5%;
+    bottom:10%;
+    background-color: rgba(225, 225, 225); /* Semi-transparent */
+    z-index: 10;
+    display: flex;
+    border:#c0326def 8px dashed;
+}
+
+.overlay-left {
+    flex: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile_picture {
+    width: 100%;
+    height: auto;
+    object-fit:contain;
+}
+
+.overlay-right {
+    flex: 1.8; 
+    position: relative;
+    display:flex;
+    justify-content: left;
+    background-color: rgba(98, 0, 255, 0.875);
+}
+
+.details-left{
+    flex: 1;
+    overflow: hidden;
+    padding: 5px 5px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffc9f5ef; 
+}
+
+
+.text{
+    margin:5px;
+    padding:0px 0px 2px 15px;
+}
+
+.details-right{
+    flex:1;
+    flex-direction: column;
+    background-color:rgb(207, 158, 255);
+    display: flex;
+}
+
+.text2{
+    margin:5px;
+    padding:0px 0px 2px 15px;
+}
+
+.text3{
+    margin:5px;
+    padding:0px 0px 2px 15px;
+}
+
+.intro p{
+    padding:10px 40px 0px 40px;
+}
+
+.imageContainer img{
+    height:250px;
+    width:auto;
+    padding:0px 20px 0px 150px;
+} 
+
+.image2{
+    border-radius: 20px 20px 20px 20px; 
+    box-shadow: #6A7B8C;
+}
+
+.details-right div{
+    margin:5px;
+}
+
+.socialMedia{
+    position: absolute;
+    background:linear-gradient(to right,#36454F, #4B586E, #6A7B8C, #8B9BA6, #A6B9C6, #C0D2E0);
+    z-index: 10;
+    bottom:0;
+    padding:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:400px;
+    height:fit-content;
+    left:550px;
+    border-radius: 20px 20px 20px 20px; 
+}
+
+.socialMedia img{
+    width:150px;
+    height:auto;
+    padding:5%;
+    border-radius: 20px 20px 20px 20px; 
+    transition: transform 0.5s;
+}
+
+.socialMedia img:hover{
+    transform: rotate(360deg);
+}     
+
+@media (max-width: 600px) {
+    .overlay {
+        top: 40%; /* Further reduce top spacing */
+        left: 20%; /* Adjust left spacing */
+        right: 5px; /* Adjust right spacing */
+    }
+
+    .profile_picture {
+        height: 150px; /* Smaller fixed height for mobile */
+    }
+
+    .details-left, .details-right {
+        padding: 10px; /* Add padding for mobile */
+        flex-direction: column; /* Stack content vertically */
+    }
+}
